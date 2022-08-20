@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: invoice-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: invoice-backend
+  template:
+    metadata:
+      labels:
+        app: invoice-backend
+    spec:
+      containers:
+        - name: invoice-backend
+          image: wesleywillians/imersao3-invoice-backend:latest
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: invoice-backend-volume
+              mountPath: /home/node/app/.env
+              subPath: .env
+      volumes:
+        - name: invoice-backend-volume
+          configMap:
+            name: invoice-backend-conf
+            items:
+              - key: env
+                path: .env
+          
+        
