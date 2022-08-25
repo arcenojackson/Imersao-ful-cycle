@@ -1,9 +1,10 @@
-## Sobre o repositório
-Esse repositório contém todo código utilizado durante as aulas para referência.
+# About this repo
 
-## Ordem recomendada de execução
+This repository contain all codes used in the immersion week classes - FullStack and FullCycle
+
+## Recommended order of execution of services
 
 * Apache Kafka
-* Codebank (Golang)
-* Back-end e front-end da loja (Nest.js e Next.js)
-* Back-end e front-end das faturas (Nest.js e Next.js)
+* Codebank
+* Store backend and frontend
+* invoices backend and frontend

@@ -63,14 +63,3 @@ func serveGrpc(processTransactionUseCase usecase.UseCaseTransaction) {
 	fmt.Println("Rodando gRPC Server")
 	grpcServer.Serve()
 }
-
-// cc := domain.NewCreditCard()
-// cc.Number = "1234"
-// cc.Name = "Jackson"
-// cc.ExpirationYear = 2021
-// cc.ExpirationMonth = 7
-// cc.CVV = 123
-// cc.Limit = 1000
-// cc.Balance = 0
-// repo := repository.NewTransactionRepositoryDb(db)
-// repo.CreateCreditCard(*cc)
